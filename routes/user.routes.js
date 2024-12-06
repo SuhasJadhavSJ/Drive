@@ -25,7 +25,7 @@ router.post('/register',
     const {email,username,password} = req.body;
 
     const hashPassword = await bcrypt.hash(password,10)
-
+    
     const newUser = await userModel.create({
         email,
         username,
